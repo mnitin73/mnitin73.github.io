@@ -6,10 +6,11 @@ import pandas as pd
 
 
 def analyse (params):
-    result = '\n'.join([str(x) for x in params.values()])
+    result = ['**' + str(k) + '** : ' + str(v) for k,v in params.items()]
     return result
 
 if __name__ == '__main__':
+    st.image('41145630595_b3801bab65_b.jpg', use_column_width = True)
     st.title('Your Mutual Fund Advisor')
     
     st.sidebar.subheader('look Period :')
@@ -47,17 +48,26 @@ if __name__ == '__main__':
     performance_priority = st.sidebar.radio(
             'Select Any One',
             ('Alpha', 'Beta', 'Balanced'))
+
+    st.sidebar.subheader('Words to Include :')
+    include_words = st.sidebar.text_input('Enter words to include in search, separated by comma')
+    
+    st.sidebar.subheader('Words to Exclude :')
+    exclude_words = st.sidebar.text_input('Enter words to exclude in search, separated by comma')
     
     params = {'look_period': look_period, 
-            'fund_categories': fund_categories, 
             'fund_types': fund_types, 
             'direct_transaction': direct_transaction,
-            'direct_transaction': direct_transaction,
+            'regular_transaction': regular_transaction,
             'mf_type': mf_type,
-            'performance_priority': performance_priority
+            'performance_priority': performance_priority,
+            'include_words': include_words.split(','),
+            'exclude_words': exclude_words.split(',')
             }
 
     results = analyse(params)
 
-    st.text_area('Display Results Here', results)
+    for k in results:
+        st.markdown(k)
+    st.subheader('The result of any function, using above as parameters, may be displayed here.')
 
