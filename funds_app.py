@@ -13,6 +13,7 @@ if __name__ == '__main__':
     st.image('41145630595_b3801bab65_b.jpg', use_column_width = True)
     st.title('Your Mutual Fund Advisor')
     
+    st.sidebar.image('Hamla.jpg', use_column_width = True)
     st.sidebar.subheader('look Period :')
     look_period = st.sidebar.selectbox(
             'Select Any One',
