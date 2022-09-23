@@ -78,7 +78,7 @@ pickleshare==0.7.4
 Pillow==7.1.2
 prometheus-client==0.7.1
 prompt-toolkit==1.0.15
-protobuf==3.11.3
+protobuf==3.18.3
 psutil==5.4.2
 ptyprocess==0.6.0
 pyasn1==0.4.2
