@@ -127,7 +127,7 @@ toml==0.10.0
 toolz==0.10.0
 tornado==5.1.1
 traitlets==4.3.2
-Twisted==17.9.0
+Twisted==22.10.0
 tzlocal==2.1
 ubuntu-drivers-common==0.0.0
 ufw==0.36
